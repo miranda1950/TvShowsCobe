@@ -34,4 +34,8 @@ class HomeScreenViewModel: ObservableObject {
         print("miran")
     }
     
+    func printA() {
+        print("Mendelski")
+    }
+    
 }
