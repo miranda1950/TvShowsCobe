@@ -9,22 +9,24 @@ import SwiftUI
 
 struct FilmItemView: View {
     
-    @StateObject var viewModel: HomeScreenViewModel
-   
+//    @StateObject var viewModel: HomeScreenViewModel
+    
+    @State var movie: Film
+    
     var body: some View {
         VStack {
             
-            Image(uiImage: viewModel.film.image!)
+            Image(uiImage: movie.image!)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
                 .padding()
         
             VStack {
-            Text(viewModel.film.title)
+                Text(movie.title)
                 .font(.headline)
                 .foregroundColor(.black)
-            Text(viewModel.film.year)
+                Text(movie.year)
                 .font(.headline)
                 .foregroundColor(.black)
                 .padding(.vertical)
@@ -36,11 +38,15 @@ struct FilmItemView: View {
         .overlay(
         RoundedRectangle(cornerRadius: 10)
             .stroke(.black))
-    }
+    }  
 }
+//
+//struct FilmItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FilmItemView(viewModel: HomeScreenViewModel(film: Film(title: "", year: "")))
+//    }
+//}
 
-struct FilmItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        FilmItemView(viewModel: HomeScreenViewModel(film: Film(title: "", year: "")))
-    }
-}
+
+
+

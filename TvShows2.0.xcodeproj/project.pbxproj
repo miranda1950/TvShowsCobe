@@ -26,6 +26,8 @@
 		C507DC0F299A63C90000755C /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507DC0E299A63C90000755C /* ServiceFactory.swift */; };
 		C507DC11299A642D0000755C /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507DC10299A642D0000755C /* PersistanceService.swift */; };
 		C507DC14299A690F0000755C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C507DC16299A690F0000755C /* Localizable.strings */; };
+		C510EBD2299D06EE0026D778 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510EBD1299D06EE0026D778 /* DetailView.swift */; };
+		C510EBD4299D06FA0026D778 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C510EBD3299D06FA0026D778 /* DetailViewModel.swift */; };
 		C5B2C56D299B7CF100280FDB /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B2C56C299B7CF100280FDB /* Film.swift */; };
 		C5B2C56F299B7E3700280FDB /* FilmItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B2C56E299B7E3700280FDB /* FilmItemView.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		C507DC38299A74020000755C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C507DC3C299A74710000755C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C507DC3D299A76A10000755C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C510EBD1299D06EE0026D778 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C510EBD3299D06FA0026D778 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C5B2C56C299B7CF100280FDB /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		C5B2C56E299B7E3700280FDB /* FilmItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +113,7 @@
 		C507DBF1299A52F40000755C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C510EBD0299D06AF0026D778 /* Detail */,
 				C507DBFF299A5E850000755C /* TopRated */,
 				C507DBF8299A58B10000755C /* Home */,
 				C507DBF2299A52F90000755C /* Main */,
@@ -179,6 +184,15 @@
 				C507DC10299A642D0000755C /* PersistanceService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C510EBD0299D06AF0026D778 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C510EBD1299D06EE0026D778 /* DetailView.swift */,
+				C510EBD3299D06FA0026D778 /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		C5B2C568299B7C4100280FDB /* Data */ = {
@@ -272,11 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C507DBF0299A4EA00000755C /* Coordinator.swift in Sources */,
+				C510EBD2299D06EE0026D778 /* DetailView.swift in Sources */,
 				C507DC0C299A63690000755C /* String+Extensions.swift in Sources */,
 				C5B2C56F299B7E3700280FDB /* FilmItemView.swift in Sources */,
 				C507DC05299A5EBA0000755C /* TopRatedView.swift in Sources */,
 				C507DBE0299A4BD50000755C /* ViewController.swift in Sources */,
 				C507DC11299A642D0000755C /* PersistanceService.swift in Sources */,
+				C510EBD4299D06FA0026D778 /* DetailViewModel.swift in Sources */,
 				C507DC0F299A63C90000755C /* ServiceFactory.swift in Sources */,
 				C507DBFC299A59810000755C /* HomeScreenViewModel.swift in Sources */,
 				C507DC03299A5EAC0000755C /* TopRatedScreenViewModel.swift in Sources */,

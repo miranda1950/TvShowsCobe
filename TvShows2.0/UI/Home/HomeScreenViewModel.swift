@@ -8,18 +8,35 @@
 import Foundation
 import UIKit
 
+//AnyObject
+protocol HomeInteractionDelegate: AnyObject {
+    func handleInteraction(_ interaction: HomeScreenViewModel.Interactions)
+}
+
+extension HomeScreenViewModel {
+    enum Interactions {
+        case showDetail
+    }
+}
+
 class HomeScreenViewModel: ObservableObject {
     
     var film: Film
-    
-    init(film: Film) {
+    private weak var delegate: HomeInteractionDelegate?
+
+    init(film: Film, delegate: HomeInteractionDelegate? = nil) {
         self.film = film
+        self.delegate = delegate
     }
     
-    func fillFilms() {
-        
-        film = Film.defaultFilmData
-    }
+//    func fillFilms() {
+//
+//        film = Film.defaultFilmData
+//    }
     
+    func showDetail() {
+        delegate?.handleInteraction(.showDetail)
+        print("miran")
+    }
     
 }

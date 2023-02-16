@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Film {
- 
+   
     var image: UIImage?
     var title: String
     var year: String
@@ -17,4 +17,6 @@ struct Film {
     static var defaultFilmData: Self {
         Film(image: UIImage(systemName: "questionmark"), title: "Harry Potter", year: "1999")
     }
+    
 }
+

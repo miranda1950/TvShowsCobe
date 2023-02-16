@@ -16,7 +16,7 @@ final class TopRatedCoordinator: Coordinator {
     }
     
     private func showTopRated()-> UIViewController {
-        let vm = TopRatedScreenViewModel()
+        let vm = TopRatedScreenViewModel(film: Film.defaultFilmData)
         let vc = UIHostingController(rootView: TopRatedView(viewModel: vm))
         vc.tabBarItem = UITabBarItem(title: "TopRated", image: UIImage(systemName: "heart"), selectedImage: UIImage(systemName: "heart.fill"))
         navigationController.viewControllers = [vc]

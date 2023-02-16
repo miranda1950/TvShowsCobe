@@ -10,5 +10,17 @@ import UIKit
 import SwiftUI
 
 class TopRatedScreenViewModel: ObservableObject {
+   
+    var film: Film
+    
+    init(film: Film) {
+        self.film = film
+    }
+    
+//    func fillFilms() {
+//
+//        film = Film.defaultFilmData
+//    }
+    
     
 }

@@ -13,29 +13,24 @@ struct HomeScreenView: View {
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-    
-    
+   
     var body: some View {
         VStack {
             Text(Localizable.title_favorites)
             ScrollView {
+                
                 LazyVGrid(columns: columns) {
                     ForEach(0..<10) {_ in
-                        
-                        FilmItemView(viewModel: HomeScreenViewModel(film: viewModel.film))
-                            
+                        FilmItemView(movie: viewModel.film)
+                            .onTapGesture {
+                                viewModel.showDetail()
+                            }
                     }
                 }
-                
             }
-            
-            
         }
         .padding(.bottom)
-        
-        
     }
-        
 }
 
 struct HomeScreenView_Previews: PreviewProvider {

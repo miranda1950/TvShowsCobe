@@ -8,14 +8,14 @@
 import Foundation
 
 protocol PersistanceServiceProtocol {
-    var language: String { get set}
+    var selectedLanguage: Language { get set}
 }
 
 enum Language: String {
     case german = "de"
     case french = "fr"
     
-    static let systemLanguage: Language = Language(rawValue: NSLocale.current.languageCode ?? "de") ?? Language.german
+//    static let systemLanguage: Language = Language(rawValue: NSLocale.current.languageCode ?? "de") ?? Language.german
 }
 
 class PersistanceService: PersistanceServiceProtocol {
@@ -26,15 +26,11 @@ class PersistanceService: PersistanceServiceProtocol {
     
     let shared = UserDefaults.standard
     
-    var language: String {
+    var selectedLanguage: Language {
         get {
-            if let language = shared.string(forKey: Keys.language) {
-                return language
-            } else {
-                shared.set(Language.systemLanguage.rawValue, forKey: Keys.language)
-                return Language.systemLanguage.rawValue
-            }
-        }
+            Language(rawValue: shared.string(forKey: Keys.language) ?? "de") ?? .german
+//            shared.string(forKey: Keys.language) ?? Language.systemLanguage.rawValue -- for string
+      }
         set {
             shared.set(newValue, forKey: Keys.language)
         }
